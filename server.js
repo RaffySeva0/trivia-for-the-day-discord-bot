@@ -14,7 +14,8 @@ client.once('ready', () => {
 })
 
 // where there's a message receive and it is equals to the condition, send message pong!
-client.on('message', message => {   
+client.on('messageCreate', message => {  
+    console.log(message); 
     // trivia for today
     let answer = db.get('trivia')['correct_answer']; 
     let incorrect_answer = db.get('trivia')['incorrect_answers'];
@@ -56,7 +57,7 @@ client.on('message', message => {
     }
 
     // Getting of current trivia
-    if (message.content === "!trivia") {
+    if (message.content === "!trivia" && message.channelId === process.env.CHANNEL_ID) {
         // Send trivia to discord
         client.channels.cache.get(process.env.CHANNEL_ID).send({ embeds: [exampleEmbed] });
     }

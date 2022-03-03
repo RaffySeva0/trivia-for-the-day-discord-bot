@@ -1,14 +1,14 @@
 {
     "trivia": {
-        "category": "Entertainment: Video Games",
+        "category": "Entertainment: Cartoon & Animations",
         "type": "multiple",
         "difficulty": "easy",
-        "question": "In which series of games do you collect souls to empower you and buy weaponry and armor with?",
-        "correct_answer": "Souls ",
+        "question": "In the show &quot;Steven Universe&quot;, who are the main two employees of The Big Donut?",
+        "correct_answer": "Sadie and Lars",
         "incorrect_answers": [
-            "Final Fantasy ",
-            "Monster Hunter",
-            "The Legend of Zelda"
+            "Steven and James",
+            "Erik and Julie",
+            "Bob and May"
         ]
     }
 }
