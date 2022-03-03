@@ -1,0 +1,28 @@
+{
+  "name": "triviafortheday",
+  "version": "1.0.0",
+  "description": "this is a discord bot that sends a trivia for the day",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaffySeva0/trivia-for-the-day-discord-bot.git"
+  },
+  "author": "Kirbz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaffySeva0/trivia-for-the-day-discord-bot/issues"
+  },
+  "homepage": "https://github.com/RaffySeva0/trivia-for-the-day-discord-bot#readme",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cron": "^1.8.2",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "node-json-db": "^1.4.1",
+    "nodemon": "^2.0.15",
+    "simple-json-db": "^1.2.3"
+  }
+}
