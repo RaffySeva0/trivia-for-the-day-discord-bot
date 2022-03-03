@@ -1,14 +1,20 @@
 {
     "trivia": {
-        "category": "Entertainment: Cartoon & Animations",
+        "category": "Entertainment: Video Games",
         "type": "multiple",
-        "difficulty": "easy",
-        "question": "In the show &quot;Steven Universe&quot;, who are the main two employees of The Big Donut?",
-        "correct_answer": "Sadie and Lars",
+        "difficulty": "medium",
+        "question": "When was Final Fantasy XV released?",
+        "correct_answer": "November 29th, 2016",
         "incorrect_answers": [
-            "Steven and James",
-            "Erik and Julie",
-            "Bob and May"
+            "October 25th, 2016",
+            "December 31th, 2016",
+            "November 30th, 2016"
         ]
-    }
+    },
+    "leaderboard": [
+        {
+            "id": "1231231312313",
+            "points": 1
+        }
+    ]
 }
