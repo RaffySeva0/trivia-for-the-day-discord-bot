@@ -1,14 +1,12 @@
 {
     "trivia": {
         "category": "Entertainment: Video Games",
-        "type": "multiple",
-        "difficulty": "medium",
-        "question": "When was Final Fantasy XV released?",
-        "correct_answer": "November 29th, 2016",
+        "type": "boolean",
+        "difficulty": "hard",
+        "question": "In Undertale, having a &quot;Fun Value&quot; set to 56-57 will play the &quot;Wrong Number Song Call&quot;.",
+        "correct_answer": "False",
         "incorrect_answers": [
-            "October 25th, 2016",
-            "December 31th, 2016",
-            "November 30th, 2016"
+            "True"
         ]
     },
     "leaderboard": [

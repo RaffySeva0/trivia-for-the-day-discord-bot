@@ -5,6 +5,7 @@ const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 const JSONdb = require('simple-json-db');
 const db = new JSONdb(__dirname + '/storage.json');
+const { decode } = require('html-entities');
 
 const client = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES'] }); 
 
@@ -19,7 +20,7 @@ client.on('messageCreate', message => {
     // trivia for today
     let answer = db.get('trivia')['correct_answer']; 
     let incorrect_answer = db.get('trivia')['incorrect_answers'];
-    let question = db.get('trivia')['question'];
+    let question = decode(`${db.get('trivia')['question']}`, {level: 'html5'});
     let type = db.get('trivia')['type'] == "boolean" ? "True/False" : "Multiple Choice";
     let category = db.get('trivia')['category'];
     let difficulty = db.get('trivia')['difficulty'];
@@ -83,7 +84,7 @@ let trivia = new CronJob('0 * * * * *', function() {
         let trivia = response.data.results[0];
         let answer = trivia['correct_answer']; 
         let incorrect_answer = trivia['incorrect_answers'];
-        let question = trivia['question'];
+        let question = decode(`${trivia['question']}`, {level: 'html5'});
         let type = trivia['type'] == "boolean" ? "True/False" : "Multiple Choice";
         let category = trivia['category'];
         let difficulty = trivia['difficulty'];
