@@ -1,18 +1,26 @@
 {
     "trivia": {
-        "category": "Entertainment: Video Games",
-        "type": "boolean",
-        "difficulty": "hard",
-        "question": "In Undertale, having a &quot;Fun Value&quot; set to 56-57 will play the &quot;Wrong Number Song Call&quot;.",
-        "correct_answer": "False",
+        "category": "Entertainment: Japanese Anime & Manga",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "In Pok&eacute;mon Chronicles, why was Misty afraid of Gyarados?",
+        "correct_answer": "She crawled into it's mouth as a baby.",
         "incorrect_answers": [
-            "True"
-        ]
+            "She found it scary.",
+            "She was badly injured from it.",
+            "It is part Bug."
+        ],
+        "points": 5
     },
+    "answered": 0,
     "leaderboard": [
         {
             "id": "1231231312313",
             "points": 1
+        },
+        {
+            "id": "585365270730637324",
+            "points": 28
         }
     ]
 }
