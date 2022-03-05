@@ -20,6 +20,7 @@ client.on("messageCreate", (message) => {
 	// trivia for today
 	let trivia = db.get("trivia");
 	let answered = db.get("answered");
+	let leaderboard = db.get("leaderboard");
 
 	let answer = trivia["correct_answer"];
 
@@ -36,19 +37,47 @@ client.on("messageCreate", (message) => {
 			.send({ embeds: [exampleEmbed] });
 	}
 
-	// console.log(answered);
+	// Sends current point of user
+	if (
+		message.content === "!points" &&
+		message.channelId === process.env.CHANNEL_ID
+	) {
+		// console.log(message);
+		let user = message.author;
+		let user_id = user.id;
+
+		// Gets username
+		let userDisc = client.users.cache.find((user) => user.id === user_id);
+		let username = userDisc.username;
+
+		// Gets current points based on the leaderboard
+		let successMessage = `*Hello ${username}! You currently have 0 points.*`;
+		for (let i = 0; i < leaderboard.length; i++) {
+			const el = leaderboard[i];
+			if (el.id === user_id) {
+				successMessage = `*Hello ${username}! You currently have ${el.points} points.*`;
+				break;
+			}
+		}
+
+		const channel = client.channels.cache.get(process.env.CHANNEL_ID);
+		channel.send(successMessage).then((message) => {
+			setTimeout(() => {
+				message.delete();
+			}, 2500);
+		});
+	}
 
 	// Checking if message being sent is equals to the correct answer
 	// Make answer and message lowercase
 	if (
 		message.content.toLowerCase() === answer.toLowerCase() &&
-		answered === 0
+		answered === 0 &&
+		message.channelId === process.env.CHANNEL_ID
 	) {
 		let user = message.author;
 		let user_id = user.id;
 		let username = user.username;
-
-		let leaderboard = db.get("leaderboard");
 
 		// Check if user is in the leaderboard
 		// If yes, increment points based on point difficulty
@@ -72,9 +101,9 @@ client.on("messageCreate", (message) => {
 		// console.log(message.author);
 		console.log("YOU GOT THE CORRECT ANSWER");
 	} else if (answered === 1) {
-		client.channels.cache
-			.get(process.env.CHANNEL_ID)
-			.send({ embeds: [exampleEmbed] });
+		// client.channels.cache
+		// 	.get(process.env.CHANNEL_ID)
+		// 	.send({ embeds: [exampleEmbed] });
 	}
 });
 

@@ -1,26 +1,22 @@
 {
     "trivia": {
-        "category": "Entertainment: Japanese Anime & Manga",
+        "category": "Science & Nature",
         "type": "multiple",
-        "difficulty": "medium",
-        "question": "In Pok&eacute;mon Chronicles, why was Misty afraid of Gyarados?",
-        "correct_answer": "She crawled into it's mouth as a baby.",
+        "difficulty": "hard",
+        "question": "The word &quot;science&quot; stems from the word &quot;scire&quot; meaning what?",
+        "correct_answer": "To know",
         "incorrect_answers": [
-            "She found it scary.",
-            "She was badly injured from it.",
-            "It is part Bug."
+            "To measure",
+            "To live",
+            "To count"
         ],
-        "points": 5
+        "points": 7
     },
     "answered": 0,
     "leaderboard": [
         {
-            "id": "1231231312313",
-            "points": 1
-        },
-        {
             "id": "585365270730637324",
-            "points": 28
+            "points": 57
         }
     ]
 }
